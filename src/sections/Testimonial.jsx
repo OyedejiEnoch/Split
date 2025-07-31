@@ -45,7 +45,6 @@ const Testimonial = () => {
             end:'200% top',
             scrub:1.5,
             pin:true,
-            markers:true
           }
         })
 
