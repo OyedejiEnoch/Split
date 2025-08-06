@@ -9,23 +9,16 @@ import Nutrition from './sections/Nutrition'
 import Benefit from './sections/Benefit'
 import Testimonial from './sections/Testimonial'
 import Footer from './sections/Footer'
+import ReactLenis from "lenis/react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 const App = () => {
 
-  useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 3,
-      effects: true,
-    });
-  });
 
   return (
-    <main>
+    <ReactLenis root className="relative min-h-screen w-screen overflow-x-auto">
       <Navbar />
-      <div id='smooth-wrapper'>
-        <div id='smooth-content'>
           <Hero />
           <Message />
           <FlavourSection />
@@ -36,11 +29,8 @@ const App = () => {
           <Testimonial />
           </div>
 
-          <Footer />
-        </div>
-      </div>
-      
-    </main>
+          <Footer />      
+    </ReactLenis>
   )
 }
 
